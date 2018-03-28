@@ -11,4 +11,3 @@ use LandmarksController
 use FiguresController
 use TitlesController
 run ApplicationController
-
