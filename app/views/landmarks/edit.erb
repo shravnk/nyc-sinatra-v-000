@@ -1,31 +1,14 @@
-<h1>Edit: <%= @landmark.name %></h1>
+<h1>Create A New landmark</h1>
 
-<form action="/landmarks/<%= @landmark.id %>" method="POST">
+<form action="/landmarks" method="POST">
   <input type="hidden" name="_method" value="PATCH">
-  <label>Name: </label>
+  <label>Landmark Name: </label>
 
-  <p><input type="text" name="landmark[name]" id="landmark_name" value="<%= @landmark.name %>"></p>
-
-  <br></br>
-  <h3>Select a Title:</h3>
-  <%Title.all.each do |title|%>
-    <label><%= title.name %></label>
-    <input type="checkbox" name="landmark[title_ids][]" id="title_<%= title.id %>" value="<%=title.id%>" <%= 'checked' if @landmark.titles.include?(title) %>>
-  <%end%><br>
-  <h3>Select a Landmark:</h3>
-  <%Landmark.all.each do |landmark|%>
-  <label><%= landmark.name %></label>
-    <input type="checkbox" name="landmark[landmark_ids][]" id="landmark_<%= landmark.id %>" value="<%=landmark.id%>" <%= 'checked' if @landmark.landmarks.include?(landmark) %>>
-  <%end%><br><br>
-
-  <label>And/or create new title:</label>
-    <input  type="text" name="title[name]" id="new_title"></input>
+  <p><input type="text" name="landmark[name]" id="landmark_name"></p>
   <br></br>
 
-  <label>And/or create new landmark:</label>
-    <input  type="text" name="landmark[name]" id="new_landmark"></input>
+  <p><input type="integer" name="landmark[year_completed]" id="year_completed"></p>
   <br></br>
 
-  <input type="submit" value="Edit landmark">
-
+  <input type="submit" value="Create New Landmark" id="Create New Landmark">
 </form>
