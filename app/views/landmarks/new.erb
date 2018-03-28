@@ -3,14 +3,12 @@
 <form action="/landmarks" method="POST">
   <label>Landmark Name: </label>
 
-  <p><input type="text" name="landmark[name]" id="landmark_name"></p>
-
+  <p><input type="text" name="landmark_name" id="landmark_name"></p>
   <br></br>
-  <h3>Select a Title:</h3>
-  <%Title.all.each do |title|%>
-    <label><%= title.name %></label>
-    <input type="checkbox" name="landmark[title_ids][]" id="title_<%= title.id %>" value="<%=title.id%>">
-  <%end%><br>
+
+  <p><input type="integer" name="year_completed" id="landmark_name"></p>
+  <br></br>
+
 
 
 
