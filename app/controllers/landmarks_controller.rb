@@ -10,10 +10,8 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    @landmark = landmark.create(params[:landmark])
+    @landmark = Landmark.create(params[:landmark])
 
-    @landmark.titles.create(params[:title]) unless params[:title][:name].empty?
-    @landmark.landmarks.create(params[:landmark]) unless params[:landmark][:name].empty?
     @landmark.save
 
     redirect "landmarks/#{@landmark.id}"
