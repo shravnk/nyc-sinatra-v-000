@@ -1,7 +1,7 @@
 <h1>Create A New landmark</h1>
 
 <form action="/landmarks" method="POST">
-  <label>Name: </label>
+  <label> Landmark Name: </label>
 
   <p><input type="text" name="landmark[name]" id="landmark_name"></p>
 
@@ -11,11 +11,6 @@
     <label><%= title.name %></label>
     <input type="checkbox" name="landmark[title_ids][]" id="title_<%= title.id %>" value="<%=title.id%>">
   <%end%><br>
-
-
-  <label>And/or create new title:</label>
-    <input  type="text" name="title[name]" id="new_title"></input>
-  <br></br>
 
 
 
