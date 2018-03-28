@@ -1,5 +1,5 @@
 class LandmarksController < ApplicationController
-  get '/figures/new' do
+  get '/landmarks/new' do
 
   end
 end
